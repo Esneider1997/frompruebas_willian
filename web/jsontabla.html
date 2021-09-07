@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+    <title>
+        How to convert JSON data to a html
+        table using JavaScript/jQuery ?
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://172.16.20.166/frompruebas/web/css/bootstrap.min.css">
+
+
+
+</head>
+
+<body style="text-align:center;">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">OJO</h1>
+          <h1 class="display-4">¯</h1>
+          <p class="lead">Your vanity URL</p>
+        </div>
+      </div>
+
+    
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">URLS:</span>
+        </div>
+        <input id="urls" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        <button type="button" class="btn btn-primary" onclick="tabla()">
+            click here
+        </button>
+    </div>
+    
+    <style>
+        .scrollable-element {
+  scrollbar-color: dark;
+}
+    </style>
+
+    <br><br>
+    <div class="table-responsive ">
+        <table class="table-dark" id="table" align="center"></table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script src="../js/moment.min.js"></script>
+    <script src="js/jsontable.js"></script>
+</body>
+
+</html>

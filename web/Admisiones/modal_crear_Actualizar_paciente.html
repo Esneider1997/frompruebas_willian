@@ -1,0 +1,301 @@
+  <!-- The Modal creacion de Paciente -->
+  <div class="modal fade " id="Modal_Crear_Paciente">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row p-5">
+                    <div class="col-sm-12 col-lg-12">
+                        <form id="fpac" autocomplete="off" list="autocompleteOff">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="text-center">Datos Personales</h6>
+                                </div>
+                                <div class="card-body">
+        
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="id_tipo_documento" class="formulario__label"> Tipo Documento <span
+                                                        class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control" id="id_tipo_documento"
+                                                    name="id_tipo_documento">
+                                                </select>
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="documento" class="formulario__label">N° de Identificación <span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="documento"
+                                                    id="documento" class="form-control" placeholder="Documento">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="id_ciudad_exp_docume" class="formulario__label">Lugar de
+                                                    Expedicion<span class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control" id="id_ciudad_exp_docume"
+                                                    name="idciudad">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="primer_nombre" class="formulario__label">Primer nombre<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" placeholder="Primer Nombre" type="text"
+                                                    name="primer_nombre" id="primer_nombre" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="segundo_nombre" class="formulario__label">Segundo nombre<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" placeholder="Segundo Nombre"
+                                                    type="text" name="segundo_nombre" id="segundo_nombre" class="form-control">
+        
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="primer_apellido" class="formulario__label">Primer Apellido<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="pirmer_apellido"
+                                                    id="primer_apellido" class="form-control" placeholder="Primer Apellido">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="segundo_apellido" class="formulario__label">Segundo Apellido<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="segundo_apellido"
+                                                    id="segundo_apellido" class="form-control" placeholder="Segundo Apellido">
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="fech_nac" class="formulario__label">Fecha de Nacimiento<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="date" id="fech_nac"
+                                                    name="fech_nac" placeholder="Fecha Nacimiento" min="1910-01-01"
+                                                    onchange="calcular_edad()" max="2021-09-07">
+        
+                                            </div>
+                                        </div>
+                                    </div>
+        
+        
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="edad" class="formulario__label">Edad</label>
+                                                <input class="form-control" type="text" id="edad" name="edad" placeholder="Edad"
+                                                    readonly>
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="id_sexo" class="formulario__label">Sexo<span
+                                                        class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control" id="id_sexo" name="idsexo">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="id_discapacidad" class="formulario__label">Discapacidad<span
+                                                        class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control " id="id_discapacidad"
+                                                    name="iddiscapacidad">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="id_estado_civil" class="formulario__label">Estado Civil<span
+                                                        class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control" id="id_estado_civil"
+                                                    name="idestadocivil">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card ">
+                                <div class="card-header">
+                                    <h6 class="text-center">Datos Complementario</h6>
+                                </div>
+                                <div class="card-body">
+        
+        
+        
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="iddepartamento" class="formulario__label">Departamento de
+                                                    Nacimiento<span class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control " id="iddepartamento"
+                                                    placeholder="departamento nacimiento" name="iddepartamento1"
+                                                    onchange="lista_ciudades('id_ciudad_nac','iddepartamento')">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="id_ciudad_nac" class="formulario__label">Municipio de
+                                                    Nacimiento<span class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control" id="id_ciudad_nac"
+                                                    name="idciudad2">
+                                                    <option value="">seleccione Ciudad</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="telefono" class="formulario__label">Telefono<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="telefono"
+                                                    id="telefono" class="form-control" placeholder="Telefono">
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="direccion" class="formulario__label">Direccion<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="direccion"
+                                                    id="direccion" class="form-control" placeholder="Direccion">
+        
+                                            </div>
+                                        </div>
+                                    </div>
+        
+        
+                                    <!-- datos -->
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="barrio" class="formulario__label">Barrio<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="barrio" id="barrio"
+                                                    class="form-control" placeholder="Barrio">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="id_grupo_cultural" class="formulario__label">Grupo Cultural<span
+                                                        class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control" id="id_grupo_cultural"
+                                                    name="idgrupocultural">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="iddepartamento2" class="formulario__label">Departamento de
+                                                    Recidencia<span class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control" id="iddepartamento2"
+                                                    placeholder="departamento de recidencia" name="iddepartamento2"
+                                                    onchange="lista_ciudades('id_ciudad_rec', 'iddepartamento2')">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="id_ciudad_rec" class="formulario__label">Municipio de
+                                                    recidencia<span class="text-danger">*</span></label>
+                                                <select required class="Cformulario  form-control" id="id_ciudad_rec"
+                                                    name="idciudad2">
+                                                    <option value="">seleccione Ciudad</option>
+                                                </select>
+        
+                                            </div>
+                                        </div>
+                                    </div>
+        
+        
+        
+        
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="email" class="formulario__label">Correo Electronico<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="correo" id="email"
+                                                    class="form-control" placeholder="Correo Electronico">
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="atencion_especial" class="formulario__label">Atencion Especial<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="atencion_especial"
+                                                    id="atencion_especial" class="form-control" placeholder="Atencion Especial">
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="nivel_educativo" class="formulario__label">Nivel Educativo<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="nivel_educativo"
+                                                    id="nivel_educativo" class="form-control" placeholder="Nivel Educativo">
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="ocupacion" class="formulario__label">Ocupacion<span
+                                                        class="text-danger">*</span></label>
+                                                <input class="Cformulario  form-control" type="text" name="ocupacion"
+                                                    id="ocupacion" class="form-control" placeholder="Ocupacion">
+        
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+        
+                            <input type="hidden" name="id" id="id" class="form-control">
+                            <br>
+                            <button type='button' onclick="activar_formulario()" class="btn btn-primary" id="btn-guardar"
+                                rol="jss">Activar </button>
+                            <button type='button' onclick="desactivar_formulario()" class="btn btn-primary" id="btn-guardar"
+                                rol="jss">Activar </button>
+                            <input type="submit" value="Submit">
+        
+        
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

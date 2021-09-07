@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center jumbotron-fluid">
+        <h1>Paciente</h1>
+        <p>Nuevo Paciente</p>
+
+        <button type="button" class="btn btn-primary" id="btnPaciente">
+            Crear Nuevo Paciente<!-- Button to Open the Modal -->
+        </button>
+    </div>
+    
+    <form id="fbp"> 
+        <input id="fbp_documento" type="text">
+        <button type="button" onclick="mostrarpaciente()" class="btn btn-primary">Consultar Paciente</button>
+    </form>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Documento</th>
+                            <th>Nombre Completo</th>
+                            <th>correo</th>
+                            <th>telefono</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+   <div id='modales'></div>
+
+
+   <script src="../../js/jquery.js"></script>
+   <script src="../js/Admision/paciente.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+       
+    </script>
+
+</body>
+
+</html>
